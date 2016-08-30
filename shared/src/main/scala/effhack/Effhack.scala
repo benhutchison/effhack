@@ -4,7 +4,7 @@ package effhack
 import cats.data.{Xor, Reader, State}
 import org.atnos.eff._
 import org.atnos.eff.all._
-import org.atnos.eff.syntax._
+import org.atnos.eff.syntax.all._
 
 import scala.util.Random
 
@@ -44,12 +44,12 @@ object Effhack extends App {
 
   type R = Fx.fx3[(String Xor ?), State[Int, ?], Reader[Config, ?]]
 
-  println(run(runState(1)(runReader(config)(runXor(randomizeName[R](Ben))))))
+//  println(run(runState(1)(runReader(config)(runXor(randomizeName[R](Ben))))))
 
 //  error: value runXor is not a member of org.atnos.eff.Eff[effhack.Effhack.R,effhack.Effhack.Person]
-//  randomizeName[R](Ben).runXor.runReader(config).runState(1).run
+  randomizeName[R](Ben).runXor.runReader(config).runState(1).run
 
 //  error: No instance found for MemberIn[[β$2$]cats.data.Xor[String,β$2$], R].
-//  println(run(runState(1)(runReader(config)(runXor(randomizeName(Ben))))))
+  run(runState(1)(runReader(config)(runXor(randomizeName[R](Ben)))))
 
 }
