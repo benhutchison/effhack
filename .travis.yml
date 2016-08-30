@@ -1,0 +1,9 @@
+language: scala
+scala:
+   - 2.10.6
+   - 2.11.8
+
+cache:
+  directories:
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt
