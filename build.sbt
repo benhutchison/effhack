@@ -27,7 +27,7 @@ lazy val effhackCross = crossProject.in(file(".")).
     version := "0.1",
     scalaVersion := "2.11.8",
     libraryDependencies ++= Seq(
-      "org.typelevel" %%% "cats" % "0.7.0",
+      "org.typelevel" %%% "cats" % "0.6.1",
       "org.scalatest" %%% "scalatest" % "3.0.0-M15" %  "test"
     ),
     libraryDependencies += "org.atnos" %% "eff-cats" % "2.0.0-RC4",
