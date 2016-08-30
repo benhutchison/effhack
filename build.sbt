@@ -30,7 +30,7 @@ lazy val effhackCross = crossProject.in(file(".")).
       "org.typelevel" %%% "cats" % "0.6.1",
       "org.scalatest" %%% "scalatest" % "3.0.0-M15" %  "test"
     ),
-    libraryDependencies += "org.atnos" %% "eff-cats" % "2.0.0-RC4",
+    libraryDependencies += "org.atnos" %% "eff-cats" % "2.0.0-RC7",
 
     // to write types like Reader[String, ?]
     addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.8.0"),
